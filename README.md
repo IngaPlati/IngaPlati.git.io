@@ -104,4 +104,9 @@ English Educator
 📞 079 181 1622
 
 ##Mock Interview Video
-https://drive.google.com/file/d/1gKy73MDUAaCJlOP1yO4qSuI5MCMInDGk/view?usp=sharing
+## Mock Interview Video
+
+<video width="600" controls>
+  <source src="mock-interview.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
