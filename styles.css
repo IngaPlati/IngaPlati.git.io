@@ -144,3 +144,7 @@ ul.refs li{padding-left:2em;text-indent:-2em;margin-bottom:12px;overflow-wrap:an
 .art-h .num{font-family:var(--d)}
 
 .charter-shots{grid-template-columns:1fr;max-width:680px}
+
+.gal{grid-template-columns:repeat(3,1fr)}@media (max-width:860px){.gal{grid-template-columns:1fr}}
+
+.narrow{max-width:340px}

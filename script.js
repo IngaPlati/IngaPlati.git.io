@@ -149,6 +149,8 @@
     WEEKS.forEach(function(w,i){
       var id='week'+w.n;
       var b='<p class="lb-head"><a class="btn ink" href="downloads/Agile_Logbook_Week'+w.n+'_Inga_Plati.pdf" target="_blank" rel="noopener">Download Week '+w.n+' (PDF)</a></p>';
+      var LC=['Taskboard and walkthrough','Walkthrough answers and the daily entries from Monday','Daily entries, ending on Friday'];
+      b+='<h5 class="wk-head">Screenshots of the logbook pages</h5><div class="shots gal">'+[1,2,3].map(function(p){var s='assets/logbook/w'+w.n+'-'+p+'.jpg',a='Agile Logbook Week '+w.n+', page '+p+': '+LC[p-1];return '<figure class="shot"><button type="button" class="zoom" data-src="'+s+'" data-alt="'+a+'"><img src="'+s+'" alt="'+a+'"></button><figcaption>Week '+w.n+', page '+p+': '+LC[p-1]+'. Select to enlarge.</figcaption></figure>'}).join('')+'</div>';
       b+='<h5 class="wk-head">Taskboard</h5><div class="lb-board"><div class="lb-col"><h5>Product Backlog</h5>'+ul(BACKLOG_ALL)+'</div><div class="lb-col"><h5>In Progress</h5>'+ul(w.inprog)+'</div><div class="lb-col"><h5>Completed</h5>'+ul(w.done)+'</div></div>';
       b+='<h5 class="wk-head">Walkthrough</h5><dl class="lb-walk">'+w.walk.map(function(a,k){return '<dt>'+WQ[k]+'</dt><dd>'+ul(a)+'</dd>'}).join('')+'</dl>';
       b+='<h5 class="wk-head">Logbook</h5>'+w.days.map(function(d){return '<div class="lb-day"><header><span>'+d[0]+'</span><span>'+d[1]+'</span></header><dl>'+[2,3,4].map(function(k,j){return '<dt>'+Q[j]+'</dt><dd>'+ul(d[k])+'</dd>'}).join('')+'</dl></div>'}).join('');
